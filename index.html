@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>somo na rak</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="tag pixel">Rao Yak Yu Kap Som O Thisut Nai Lok</div>
+        <h1 class="pixel">Piano Song Chotmai</h1>
+        <p class="small">รับจดหมายจากคนที่เจ๋งที่สุด</p>
+        <button class="btn pink" onclick="showMailPopup()">ปุ่มรัก</button>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="mail-modal" id="mailModal" aria-hidden="true">
+        <div class="mail-modal-inner">
+          <button class="modal-close" onclick="closeMailPopup()" aria-label="ปิด">
+            ✕
+          </button>
+          <h2 class="pixel"> SOM O MAIL</h2>
+          <p id="mailHint">
+            มีจดหมายฉบับหนึ่งส่งถึงส้มโอหมูๆ กดที่ซองเพื่อเปิดอ่านเลยย อิอิ
+          </p>
+          <div
+            class="envelope"
+            role="button"
+            tabindex="0"
+            aria-label="เปิดจดหมาย"
+            onclick="openLetter()"
+            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLetter()}"
+          >
+            <span class="heart">♥</span>
+          </div>
+          <article class="letter" id="letter">
+            <h2>♡ ถึง panurat phetploy ♡</h2>
+            <p id="letterText">
+              ขอบคุณที่ยังอยู่นะ แค่อยากทำอะไีรน่ารักๆให้ไม่รู้
+              จะชอบไหม 5555 เกี่ยวกับเว็บแถม มีอันเดียวในโลกน้าา ไม่หายแน่
+              เข้ามาดูได้ตลอด
+              ขอบคุณที่ช่วยเหลือมาตลอดนะไม่ว่าจะมากจะน้อย
+              พยายามง้อโนอีกหน่อยนะ555
+            </p>
+            <div class="sign">จาก วรรณกานต์</div>
+          </article>
+        </div>
+      </div>
+    <script src="script.js"></script>
+  </body>
+</html>
